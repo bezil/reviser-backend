@@ -26,5 +26,14 @@ namespace reviser_api.Controllers
 
             return Ok(userList);
         }
+
+        [HttpPost]
+        public ActionResult<User> Post(User user){
+            MongoClient dbClient = new MongoClient(_configuration.GetConnectionString("MongoDb"));
+
+            dbClient.GetDatabase("ReviserDatabase").GetCollection<User>("UserCollection").InsertOne(user);
+
+            return Ok("user added successfully");
+        }
     }
 }
