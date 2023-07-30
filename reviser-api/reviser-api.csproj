@@ -9,5 +9,6 @@
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.9"/>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
     <PackageReference Include="MongoDB.Driver" Version="2.20.0"/>
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="7.0.9"/>
   </ItemGroup>
 </Project>
