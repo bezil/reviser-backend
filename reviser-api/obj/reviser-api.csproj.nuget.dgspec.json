@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/basilgeorge/Documents/fullstack projects/reviser/reviser-backend/reviser-backend/reviser-api/reviser-api.csproj": {}
+    "/Users/basilgeorge/Documents/fullstack projects/reviser/reviser-backend/reviser-api/reviser-api.csproj": {}
   },
   "projects": {
-    "/Users/basilgeorge/Documents/fullstack projects/reviser/reviser-backend/reviser-backend/reviser-api/reviser-api.csproj": {
+    "/Users/basilgeorge/Documents/fullstack projects/reviser/reviser-backend/reviser-api/reviser-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/basilgeorge/Documents/fullstack projects/reviser/reviser-backend/reviser-backend/reviser-api/reviser-api.csproj",
+        "projectUniqueName": "/Users/basilgeorge/Documents/fullstack projects/reviser/reviser-backend/reviser-api/reviser-api.csproj",
         "projectName": "reviser-api",
-        "projectPath": "/Users/basilgeorge/Documents/fullstack projects/reviser/reviser-backend/reviser-backend/reviser-api/reviser-api.csproj",
+        "projectPath": "/Users/basilgeorge/Documents/fullstack projects/reviser/reviser-backend/reviser-api/reviser-api.csproj",
         "packagesPath": "/Users/basilgeorge/.nuget/packages/",
-        "outputPath": "/Users/basilgeorge/Documents/fullstack projects/reviser/reviser-backend/reviser-backend/reviser-api/obj/",
+        "outputPath": "/Users/basilgeorge/Documents/fullstack projects/reviser/reviser-backend/reviser-api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/basilgeorge/.nuget/NuGet/NuGet.Config"
@@ -42,6 +42,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.9, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.20.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
