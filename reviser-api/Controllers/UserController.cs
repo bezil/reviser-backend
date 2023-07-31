@@ -4,13 +4,16 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Authorization;
 using MongoDB.Driver;
+
 using reviser_api.Models;
 
 namespace reviser_api.Controllers
 {
+    [Authorize]
     [ApiController]
-    [Route("[controller]")]
+    [Route("/users")]
     public class UserController : ControllerBase
     {
         private readonly IConfiguration _configuration;
@@ -28,6 +31,7 @@ namespace reviser_api.Controllers
         }
 
         [HttpPost]
+        [Route("/create-user")]
         public ActionResult<User> Post(User user){
             MongoClient dbClient = new MongoClient(_configuration.GetConnectionString("MongoDb"));
 
