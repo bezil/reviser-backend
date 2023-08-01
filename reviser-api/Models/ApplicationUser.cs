@@ -7,7 +7,7 @@ using MongoDbGenericRepository.Attributes;
 
 namespace reviser_api.Models
 {
-    [CollectionName("AdminCollection")]
+    [CollectionName("UserCollection")]
     public class ApplicationUser : MongoIdentityUser<Guid>
     {
         public string FullName { get; set; } = string.Empty;

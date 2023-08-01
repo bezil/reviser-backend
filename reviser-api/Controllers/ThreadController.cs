@@ -13,31 +13,31 @@ namespace reviser_api.Controllers
 {
     [Authorize]
     [ApiController]
-    [Route("/users")]
-    public class UserController : ControllerBase
+    [Route("/threads")]
+    public class ThreadController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        public UserController(IConfiguration configuration){
+        public ThreadController(IConfiguration configuration){
             _configuration = configuration;
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<User>> Get(){
+        public ActionResult<IEnumerable<Threads>> Get(){
             MongoClient dbClient = new MongoClient(_configuration.GetConnectionString("MongoDb"));
 
-            var userList = dbClient.GetDatabase("ReviserDatabase").GetCollection<User>("UserCollection").AsQueryable();
+            var threads = dbClient.GetDatabase("ReviserDatabase").GetCollection<Threads>("ThreadCollection").AsQueryable();
 
-            return Ok(userList);
+            return Ok(threads);
         }
 
         [HttpPost]
-        [Route("/create-user")]
-        public ActionResult<User> Post(User user){
+        [Route("/create-thread")]
+        public ActionResult<Threads> Post(Threads thread){
             MongoClient dbClient = new MongoClient(_configuration.GetConnectionString("MongoDb"));
 
-            dbClient.GetDatabase("ReviserDatabase").GetCollection<User>("UserCollection").InsertOne(user);
+            dbClient.GetDatabase("ReviserDatabase").GetCollection<Threads>("ThreadCollection").InsertOne(thread);
 
-            return Ok("user added successfully");
+            return Ok("Thread added successfully");
         }
     }
 }

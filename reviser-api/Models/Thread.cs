@@ -7,7 +7,7 @@ using MongoDB.Bson;
 
 namespace reviser_api.Models
 {
-    public class User
+    public class Threads
     {
         public ObjectId Id { get; set; }
         public string? Name { get; set;}
