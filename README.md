@@ -1,2 +1,2 @@
-# reviser-backend
-Backend for Reviser
+# backend
+Backend using C#
